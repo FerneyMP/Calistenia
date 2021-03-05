@@ -43,67 +43,58 @@ El objetivo principal de este trabajo es la realización y ejecución de una act
 
 
 \section{Sección de contenido} \label{contenido}
-Esta sección es para agregar toda la información correspondiente con código, citas, etc.
-\subsection{Citación}
-Vamos a citar por ejemplo un artículo de \textbf{Albert Einstein} \cite{einstein}.
-También es posible citar libros \cite{dirac} o documentos en línea \cite{knuthwebsite}.\\\\
-Revisar en la última sección el formato de las referencias en IEEE.
+A continuación, se presentan cuatro secciones, en las cuales se describen el problema, la solución a este recurriendo a instrucciones, también, se expone el problema y la solución mediante imágenes, y por último, se adjunta un link al sitio web que almacena un vídeo que contiene el experimento con tres personas voluntarias dispuestas a poner en prueba la efectividad de dichas instrucciones.
 
-\subsection{Incluir código en el documento}
-%
-A continuación, se presenta el código \ref{codigo_ejemplo}, que nos permite incluir en el informe partes de programa que requieran una explicación adicional.
-\begin{lstlisting}[language=C++, label=codigo_ejemplo]
-// Programa desarrollado, compilado y ejecutado en https://www.onlinegdb.com
-#include <iostream>
+\subsection{Problema}
+Se tienen tres elementos que se presentan en la sección \ref{imagenes}, los cuales serán implementados para plantear el problema como tal.
+Ahora bien, la condición inicial es la siguiente; se debe hacer uso de una superficie plana (mesa), en la cuál tras ubicar las tarjetas de igual tamaño y proporción por debajo de la hoja en blanco sobre dicha superficie, se debe proceder haciendo uso de sólo una mano, a tratar de formar una pirámide como se indica en la figura \ref{fig:Piramide}.
 
-/*
- * Esto es un comentario de varias lineas
- */
+\subsection{Instrucciones de solución}
+1. Si la hoja en blanco está ubicada en posición vertical, girarla hasta que quede ubicada en posición horizontal.
 
-// Comentario de una sola linea
+2. Si la hoja está ubicada en posición horizontal omitir el paso 1.
 
-#define N 10
+3. Por condiciones naturales al posicionar de forma horizontal la hoja se forma un rectángulo. Ahora bien, hacer un doblez en la parte superior del ancho del rectángulo hasta la mitad de la hoja. Repetir el proceso pero en la parte inferior del ancho del rectángulo. 
 
-using namespace std;
+4. Por consiguiente, se presencia que la nueva forma de la hoja queda de manera similar a un plegable. Levantar la hoja desde cualquier parte tratando de mantener dicha forma, desplazarla unos cuantos centímetros a la derecha hasta ver que se puedan presenciar las tarjetas y descargarla sobre la misma superficie plana inicial (mesa).
 
-int main()
-{
-    
-    for( int i = 0 ; i < N ; i++ ){
-        
-        if( !(i % 2) )
-            cout << " El valor de i es -> " << i << endl;
-    }
-    
-    return 0;
-}
+5. Si las tarjetas se encuentran desordenadas o regadas, sobreponer una ante la otra, levantarlas y desplazarlas unos centímetros a la izquierda de la superficie plana inicial y descargarlas. 
 
-//Resultado programa
+6. Ahora, volver a sujetar la hoja en blanco manteniendo la forma del plegable y levantarla para ubicarla en la posición inicial sobre la superficie plana (mesa) de la cuál fue desplazada. Cabe anotar que, la posición de la hoja debe ser exactamente igual al momento en que fue retirada por primera vez, es decir, ubicar la hoja de forma horizontal (estado inicial en forma de plegable). Luego girar la hoja hacia arriba (90°) hasta quedar de forma vertical. 
 
-/*
-El valor de i es -> 0
-El valor de i es -> 2
-El valor de i es -> 4
-El valor de i es -> 6
-El valor de i es -> 8
-*/
-\end{lstlisting}
-En la sección \ref{imagenes}, se presentará como añadir ilustraciones al texto.
+7. Dirigirse hacia las tarjetas que deben estar sobrepuestas, sujetarlas con las yemas de los dedos manteniendo la sobreposición, luego, levantarlas.
+
+8. Después de levantar las tarjetas sobrepuestas, girar las tarjetas de manera horizontal hasta formar un rectángulo pequeño. Si se repara en la posición de las tarjetas y la hoja, se forma un eje coordenado (x,y).
+
+9. Teniendo en cuenta esa imagen mental del eje coordenado (x,y), tratar de ubicar las tarjetas sobre el centro de la hoja (origen del eje) y apoyarlas sobre esta.
+
+10. Levantar el dedo meñique para mayor maniobrabilidad, luego deslizar levemente ambas tarjetas hacia los doblez de las hojas y sin permitir que se desplomen las tarjetas, formar una pirámide como se presencia en la figura \ref{fig:Piramide}.
+
+11. Luego de formar la pirámide, liberar el agarre de la mano a las tarjetas levemente para evitar dañar la figura.
 
 \section{Inclusión de imágenes} \label{imagenes}
-
-En la Figura (\ref{fig:cpplogo}), se presenta el logo de C++ contenido en la carpeta images.
-
 \begin{figure}[h]
-\includegraphics[width=4cm]{cpplogo.png}
+\includegraphics[width=4cm]{Hoja.jpeg}
 \centering
-\caption{Logo de C++}
-\label{fig:cpplogo}
+\caption{Hoja en blanco}
+\label{fig:Hoja}
 \end{figure}
 
-Las secciones (\ref{intro}), (\ref{contenido}) y (\ref{imagenes}) dependen del estilo del documento.
+\begin{figure}[h]
+\includegraphics[width=4cm]{Tarjetas.jpeg}
+\centering
+\caption{Tarjetas de igual tamaño y proporción}
+\label{fig:Tarjetas}
+\end{figure}
 
-\bibliographystyle{IEEEtran}
-\bibliography{references}
 
+\begin{figure}[h]
+\includegraphics[width=4cm]{Piramide.jpeg}
+\centering
+\caption{Resultado esperado(pirámide)}
+\label{fig:Piramide}
+\end{figure}
+
+\section{Link del experimento}
+Haciendo uso de la plataforma de YouTube se añade el link del experimento realizado:
 \end{document}
